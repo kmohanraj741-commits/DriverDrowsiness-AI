@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Driver Drowsiness Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚗 AI Driver Drowsiness Detection</h1>
+
+    <h2>Live Webcam with AI Face Detection</h2>
+
+    <div class="dashboard">
+
+        <div class="left-panel">
+
+            <div class="camera-box">
+
+                <img src="{{ url_for('video_feed') }}">
+
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+
+            <h2>System Status</h2>
+
+            <p>✅ Camera Connected</p>
+
+            <p>✅ AI Model Running</p>
+
+            <p>✅ Face Detection Active</p>
+
+            <p>✅ Eye Tracking Active</p>
+
+            <p>✅ Alarm System Ready</p>
+
+            <p>✅ Flask Server Running</p>
+
+        </div>
+
+    </div>
+
+</div>
+<footer>
+
+    <hr>
+
+    <h3>AI Powered Driver Monitoring System</h3>
+
+    <p>
+        Developed using Flask | OpenCV | MediaPipe | Python
+    </p>
+
+    <p>
+        Final Year AI Project
+    </p>
+
+</footer>
+
+</body>
+
+</html>
