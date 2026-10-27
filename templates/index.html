@@ -10,6 +10,7 @@
 
 </head>
 
+
 <body>
 
 <div class="container">
@@ -18,17 +19,30 @@
 
     <h2>Live Webcam with AI Face Detection</h2>
 
+
     <div class="dashboard">
+
+
+        <!-- ================================================= -->
+        <!-- LEFT PANEL - CAMERA -->
+        <!-- ================================================= -->
 
         <div class="left-panel">
 
             <div class="camera-box">
 
-                <img src="{{ url_for('video_feed') }}">
+                <img src="{{ url_for('video_feed') }}"
+                     alt="Live Driver Camera">
 
             </div>
 
         </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- RIGHT PANEL -->
+        <!-- ================================================= -->
 
         <div class="right-panel">
 
@@ -46,26 +60,164 @@
 
             <p>✅ Flask Server Running</p>
 
+
+            <!-- ============================================= -->
+            <!-- DRIVER RISK MONITOR -->
+            <!-- ============================================= -->
+
+            <div class="risk-monitor">
+
+                <h2>Driver Risk Monitor</h2>
+
+
+                <div class="risk-item">
+
+                    <span>Risk Score</span>
+
+                    <strong id="risk-score">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Risk Level</span>
+
+                    <strong id="risk-level">
+                        LOW
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Warning Level</span>
+
+                    <strong id="warning-level">
+                        NONE
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="risk-item">
+
+                    <span>EAR Trend</span>
+
+                    <strong id="ear-trend">
+                        STABLE
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Blink Pattern</span>
+
+                    <strong id="blink-pattern">
+                        NORMAL
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Head Direction</span>
+
+                    <strong id="head-direction">
+                        CENTER
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="risk-item">
+
+                    <span>Drowsiness Events</span>
+
+                    <strong id="drowsiness-events">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Distraction Events</span>
+
+                    <strong id="distraction-events">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <span>Total Blinks</span>
+
+                    <strong id="total-blinks">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
         </div>
 
     </div>
 
+
 </div>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
 <footer>
 
     <hr>
 
-    <h3>AI Powered Driver Monitoring System</h3>
+    <h3>
+        AI Powered Driver Monitoring System
+    </h3>
 
     <p>
         Developed using Flask | OpenCV | MediaPipe | Python
     </p>
 
     <p>
-        Final Year AI Project
+        AI Project
     </p>
 
 </footer>
+
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}">
+</script>
+
 
 </body>
 
